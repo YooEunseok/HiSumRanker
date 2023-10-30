@@ -3,3 +3,6 @@ checkpoints/*
 local_cache/*
 logs/*
 wandb/*
+tuning_gpuid*
+command*
+run*
