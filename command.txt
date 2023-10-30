@@ -1,0 +1,10 @@
+ps aux | grep python
+
+tail -f /home/nlplab/hdd1/yoo/BRIO/baseline_mask/logs/tuning_gpuid0.log
+tail -f /home/nlplab/hdd1/yoo/BRIO/baseline_mask/logs/tuning_gpuid1.log
+
+bash tuning_gpuid0.sh
+bash tuning_gpuid1.sh
+
+nohup bash tuning_gpuid0.sh > ./logs/tuning_gpuid0.log &
+nohup bash tuning_gpuid1.sh > ./logs/tuning_gpuid1.log &

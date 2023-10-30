@@ -1,0 +1,64 @@
+wandb: Currently logged in as: sunnycloud56 (bubbletea506). Use `wandb login --relogin` to force relogin
+wandb: wandb version 0.15.12 is available!  To upgrade, please run:
+wandb:  $ pip install wandb --upgrade
+wandb: Tracking run with wandb version 0.15.10
+wandb: Run data is saved locally in /home/nlplab/hdd1/yoo/BRIO/baseline_mask/wandb/run-20231025_162154-l8ba2gzy
+wandb: Run `wandb offline` to turn off syncing.
+wandb: Syncing run sent_sw{0.5}_sm{0.05}_m{0.02}_intra_nopen
+wandb: ⭐️ View project at https://wandb.ai/bubbletea506/Abstractive%20Summarization%20tmp
+wandb: 🚀 View run at https://wandb.ai/bubbletea506/Abstractive%20Summarization%20tmp/runs/l8ba2gzy
+  0%|          | 0/287227 [00:00<?, ?it/s]  0%|          | 0/287227 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "main.py", line 456, in <module>
+    train(args)
+  File "main.py", line 293, in train
+    for (i, batch) in enumerate(tqdm(train_dataloader)):
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/site-packages/tqdm/std.py", line 1182, in __iter__
+    for obj in iterable:
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 633, in __next__
+    data = self._next_data()
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1345, in _next_data
+    return self._process_data(data)
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/site-packages/torch/utils/data/dataloader.py", line 1371, in _process_data
+    data.reraise()
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/site-packages/torch/_utils.py", line 644, in reraise
+    raise exception
+UnboundLocalError: Caught UnboundLocalError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/site-packages/torch/utils/data/_utils/worker.py", line 308, in _worker_loop
+    data = fetcher.fetch(index)
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/site-packages/torch/utils/data/_utils/fetch.py", line 54, in fetch
+    return self.collate_fn(data)
+  File "/home/nlplab/hdd1/yoo/BRIO/baseline_mask/data_utils.py", line 195, in collate_mp_brio
+    "idx":idx
+UnboundLocalError: local variable 'idx' referenced before assignment
+
+wandb: Waiting for W&B process to finish... (failed 1). Press Control-C to abort syncing.
+wandb: - 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: \ 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/site-packages/wandb/sdk/wandb_manager.py", line 175, in _teardown
+    result = self._service.join()
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/site-packages/wandb/sdk/service/service.py", line 258, in join
+    ret = self._internal_proc.wait()
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/subprocess.py", line 1083, in wait
+    return self._wait(timeout=timeout)
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/subprocess.py", line 1822, in _wait
+    (pid, sts) = self._try_wait(0)
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/subprocess.py", line 1780, in _try_wait
+    (pid, sts) = os.waitpid(self.pid, wait_flags)
+KeyboardInterrupt
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 43, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/site-packages/wandb/analytics/sentry.py", line 178, in end_session
+    client.flush()
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/site-packages/sentry_sdk/client.py", line 634, in flush
+    self.session_flusher.flush()
+  File "/home/nlplab/anaconda3/envs/brio/lib/python3.8/site-packages/sentry_sdk/sessions.py", line 94, in flush
+    envelope.add_session(session)
+KeyboardInterrupt
+wandb: | 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: / 0.005 MB of 0.005 MB uploaded (0.000 MB deduped)wandb: 🚀 View run sent_sw{0.5}_sm{0.05}_m{0.02}_intra_nopen at: https://wandb.ai/bubbletea506/Abstractive%20Summarization%20tmp/runs/l8ba2gzy
+wandb: ️⚡ View job at https://wandb.ai/bubbletea506/Abstractive%20Summarization%20tmp/jobs/QXJ0aWZhY3RDb2xsZWN0aW9uOjEwOTcyMDMwNA==/version_details/v1
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Find logs at: ./wandb/run-20231025_162154-l8ba2gzy/logs
