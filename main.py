@@ -46,7 +46,7 @@ def evaluation(args):
     
     # Output 
     model_name=args.model_pt.split("/")[-2]
-    output_path = "/home/nlplab/hdd1/yoo/BRIO/data/cnndm/diverse/test_output/"+model_name
+    output_path = "../data/cnndm/diverse/test_output/"+model_name
     if os.path.exists(output_path):
         assert "save path exist"
     os.makedirs(output_path,exist_ok=True)
@@ -110,7 +110,7 @@ def validation(args, val_check_file_path, val_count, val_dataloader, model, tok)
     
     # Output 
     model_name=args.result_path
-    output_path = "/home/nlplab/hdd1/yoo/BRIO/data/cnndm/diverse/val_output/"+model_name+"/"+str(val_count)
+    output_path = "../data/cnndm/diverse/val_output/"+model_name+"/"+str(val_count)
     if os.path.exists(output_path):
         assert "save path exist"
     os.makedirs(output_path,exist_ok=True)
@@ -224,7 +224,7 @@ def train(args):
     os.makedirs(save_path,exist_ok=True)
 
     # Output...
-    val_check_path = "/home/nlplab/hdd1/yoo/BRIO/data/cnndm/diverse/val_output/"+args.result_path
+    val_check_path = "../data/cnndm/diverse/val_output/"+args.result_path
     if os.path.exists(val_check_path):
         assert "save path exist"
     os.makedirs(val_check_path,exist_ok=True)

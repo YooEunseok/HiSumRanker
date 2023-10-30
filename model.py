@@ -153,7 +153,7 @@ def RankingLoss(args, is_val, div_num, sent_rouges, sent_length, token_level_sco
 
 
 def ValRankingLoss(args, output_path, div_num, idx, sent_length, token_level_score, score):  #####
-    with open('/home/nlplab/hdd1/yoo/BRIO/data/cnndm/diverse/new_val/'+str(idx)+'.json', 'r') as f:
+    with open('../data/cnndm/diverse/new_val/'+str(idx)+'.json', 'r') as f:
         json_data = json.load(f) 
         
     sent_scores=[]
@@ -179,7 +179,7 @@ def ValRankingLoss(args, output_path, div_num, idx, sent_length, token_level_sco
 
         
 def EvalRankingLoss(args, output_path, div_num, idx, sent_length, token_level_score, score):  #####
-    with open('/home/nlplab/hdd1/yoo/BRIO/data/cnndm/diverse/new_test/'+str(idx)+'.json', 'r') as f:
+    with open('../data/cnndm/diverse/new_test/'+str(idx)+'.json', 'r') as f:
         json_data = json.load(f) 
         
     sent_scores=[]
